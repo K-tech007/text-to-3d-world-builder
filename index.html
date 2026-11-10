@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to 3D | World Builder</title>
+</head>
+<body>
+    <div id="app">
+        <header class="topbar">
+            <h1>WORLD BUILDER</h1>
+            <span>TEXT-TO-3D STUDIO</span>
+        </header>
+
+        <main class="workspace">
+            <section class="scene-panel">
+                <div id="scene-container"></div>
+                <div class="scene-label">3D ENVIRONMENT</div>
+            </section>
+
+            <aside class="control-panel">
+                <h2>Create Your World</h2>
+                <p>Describe the environment you want to create.</p>
+
+                <textarea
+                    id="command-input"
+                    placeholder="Example: Add 5 trees..."
+                ></textarea>
+
+                <button id="generate-btn">Generate Environment</button>
+
+                <div class="examples">
+                    <h3>Try these commands</h3>
+                    <button class="example-btn">Add 5 trees</button>
+                    <button class="example-btn">Make it nighttime</button>
+                    <button class="example-btn">Make it rainy</button>
+                </div>
+
+                <p id="status">Your world is ready to create.</p>
+            </aside>
+        </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

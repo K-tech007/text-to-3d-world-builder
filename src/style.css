@@ -1,0 +1,141 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101713;
+    color: white;
+}
+
+.topbar {
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #18231c;
+    border-bottom: 1px solid #35483a;
+}
+
+.topbar h1 {
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.topbar span {
+    color: #9bb5a0;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    height: calc(100vh - 70px);
+}
+
+.scene-panel {
+    position: relative;
+    overflow: hidden;
+    background: #263d30;
+}
+
+#scene-container {
+    width: 100%;
+    height: 100%;
+}
+
+.scene-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background: #101713bb;
+    border: 1px solid #607b64;
+    border-radius: 6px;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.control-panel {
+    padding: 25px;
+    background: #18231c;
+    border-left: 1px solid #35483a;
+}
+
+.control-panel h2 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.control-panel p {
+    color: #a7b7aa;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 110px;
+    padding: 12px;
+    background: #101713;
+    border: 1px solid #526c56;
+    border-radius: 7px;
+    color: white;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #729b72;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #8ab68a;
+}
+
+.examples {
+    margin-top: 35px;
+}
+
+.examples h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.example-btn {
+    background: #293a2e;
+    border: 1px solid #526c56;
+    text-align: left;
+    font-weight: normal;
+}
+
+#status {
+    margin-top: 25px;
+    color: #a8d6a8;
+}
+
+@media (max-width: 750px) {
+    .workspace {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .scene-panel {
+        height: 55vh;
+    }
+}
